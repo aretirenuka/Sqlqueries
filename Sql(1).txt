@@ -1,0 +1,163 @@
+SQL> create user Football identified by system;
+
+User created.
+
+
+SQL> create table Football_Venue
+  2  (
+  3  venue_id number(10),
+  4  venue_name varchar2(20),
+  5  city_id number(10),
+  6  capacity number(10)
+  7  );
+
+Table created.
+
+SQL> insert into Football_Venue values(&a,&b,&c,&d);
+Enter value for a: 1003
+Enter value for b: 'France'
+Enter value for c: 42115
+Enter value for d: 10
+old   1: insert into Football_Venue values(&a,&b,&c,&d)
+new   1: insert into Football_Venue values(1003,'France',42115,10)
+
+1 row created.
+
+SQL> insert into Football_Venue values(&a,&b,&c,&d);
+Enter value for a: 1006
+Enter value for b: 'Spain'
+Enter value for c: 1008
+Enter value for d: 100034
+old   1: insert into Football_Venue values(&a,&b,&c,&d)
+new   1: insert into Football_Venue values(1006,'Spain',1008,100034)
+
+1 row created.
+
+SQL> insert into Football_Venue values(&a,&b,&c,&d);
+Enter value for a: 1008
+Enter value for b: 'Germany'
+Enter value for c: 1200
+Enter value for d: 2727
+old   1: insert into Football_Venue values(&a,&b,&c,&d)
+new   1: insert into Football_Venue values(1008,'Germany',1200,2727)
+
+1 row created.
+
+SQL> insert into Football_Venue values(&a,&b,&c,&d);
+Enter value for a: 1004
+Enter value for b: 'Italy'
+Enter value for c: 1002
+Enter value for d: 91494
+old   1: insert into Football_Venue values(&a,&b,&c,&d)
+new   1: insert into Football_Venue values(1004,'Italy',1002,91494)
+
+1 row created.
+
+SQL> insert into Football_Venue values(&a,&b,&c,&d);
+Enter value for a: 1005
+Enter value for b: 'Brazil'
+Enter value for c: 10034
+Enter value for d: 4388
+old   1: insert into Football_Venue values(&a,&b,&c,&d)
+new   1: insert into Football_Venue values(1005,'Brazil',10034,4388)
+
+1 row created.
+
+SQL> insert into Football_Venue values(&a,&b,&c,&d);
+Enter value for a: 1009
+Enter value for b: 'Mexico'
+Enter value for c: 6300
+Enter value for d: 4211
+old   1: insert into Football_Venue values(&a,&b,&c,&d)
+new   1: insert into Football_Venue values(1009,'Mexico',6300,4211)
+
+1 row created.
+
+SQL> insert into Football_Venue values(&a,&b,&c,&d);
+Enter value for a: 1007
+Enter value for b: 'Japan'
+Enter value for c: 8567
+Enter value for d: 2344
+old   1: insert into Football_Venue values(&a,&b,&c,&d)
+new   1: insert into Football_Venue values(1007,'Japan',8567,2344)
+
+1 row created.
+
+SQL> insert into Football_Venue values(&a,&b,&c,&d);
+Enter value for a: 1200
+Enter value for b: 'Usa'
+Enter value for c: 9898
+Enter value for d: 3456
+old   1: insert into Football_Venue values(&a,&b,&c,&d)
+new   1: insert into Football_Venue values(1200,'Usa',9898,3456)
+
+1 row created.
+
+SQL> insert into Football_Venue values(&a,&b,&c,&d);
+Enter value for a: 'Mexico'
+Enter value for b: '
+Enter value for c:
+Enter value for d:
+old   1: insert into Football_Venue values(&a,&b,&c,&d)
+new   1: insert into Football_Venue values('Mexico',',,)
+ERROR:
+ORA-01756: quoted string not properly terminated
+
+
+SQL> insert into Football_Venue values(&a,&b,&c,&d);
+Enter value for a: 2344
+Enter value for b: 'Mexico'
+Enter value for c: 234
+Enter value for d: 3456
+old   1: insert into Football_Venue values(&a,&b,&c,&d)
+new   1: insert into Football_Venue values(2344,'Mexico',234,3456)
+
+1 row created.
+
+SQL> insert into Football_Venue values(&a,&b,&c,&d);
+Enter value for a: 8765
+Enter value for b: 'Korea'
+Enter value for c: 578
+Enter value for d: 43456
+old   1: insert into Football_Venue values(&a,&b,&c,&d)
+new   1: insert into Football_Venue values(8765,'Korea',578,43456)
+
+1 row created.
+
+
+SQL> insert into Football_Venue values(&a,&b,&c,&d);
+Enter value for a: 123
+Enter value for b: 'Australia'
+Enter value for c: 4323
+Enter value for d: 234
+old   1: insert into Football_Venue values(&a,&b,&c,&d)
+new   1: insert into Football_Venue values(123,'Australia',4323,234)
+
+1 row created.
+
+SQL> SELECT COUNT(*) FROM Football_Venue;
+
+  COUNT(*)
+----------
+        10
+
+SQL> DELETE FROM Football_Venue WHERE venue_name='Australia';
+
+1 row deleted.
+
+SQL> select * from Football_Venue;
+
+  VENUE_ID VENUE_NAME              CITY_ID   CAPACITY
+---------- -------------------- ---------- ----------
+      1003 France                    42115         10
+      1006 Spain                      1008     100034
+      1008 Germany                    1200       2727
+      1004 Italy                      1002      91494
+      1005 Brazil                    10034       4388
+      1009 Mexico                     6300       4211
+      1007 Japan                      8567       2344
+      1200 Usa                        9898       3456
+      2344 Mexico                      234       3456
+      8765 Korea                       578      43456
+
+10 rows selected.
