@@ -1,0 +1,250 @@
+
+SQL> create user Employee identified by system;
+
+User created.
+
+SQL> create table Employee_Details
+  2  (
+  3  Emp_id number(10),
+  4  Emp_name varchar2(20),
+  5  Job_name varchar2(20),
+  6  Manager_id number(10),
+  7  Hire_date date,
+  8  Salary number(10),
+  9  Dep_id number(10)
+ 10  );
+
+Table created.
+
+SQL> insert into Employee_Details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 1
+Enter value for b: 'x'
+Enter value for c: 'manager'
+Enter value for d: 11
+Enter value for e: '01-mar-23'
+Enter value for f: 80000
+Enter value for g: 2
+old   1: insert into Employee_Details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into Employee_Details values(1,'x','manager',11,'01-mar-23',80000,2)
+
+1 row created.
+
+SQL> insert into Employee_Details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 2
+Enter value for b: 'y'
+Enter value for c: 'analyst'
+Enter value for d: 12
+Enter value for e: '02-mar-23'
+Enter value for f: 90000
+Enter value for g: 2
+old   1: insert into Employee_Details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into Employee_Details values(2,'y','analyst',12,'02-mar-23',90000,2)
+
+1 row created.
+
+SQL> insert into Employee_Details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 3
+Enter value for b: 'z'
+Enter value for c: 'developer'
+Enter value for d: 13
+Enter value for e: '03-mar-23'
+Enter value for f: 100000
+Enter value for g: 3
+old   1: insert into Employee_Details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into Employee_Details values(3,'z','developer',13,'03-mar-23',100000,3)
+
+1 row created.
+
+SQL> insert into Employee_Details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 4
+Enter value for b: 'a'
+Enter value for c: 'designer'
+Enter value for d: 14
+Enter value for e: '04-mar-23'
+Enter value for f: 50000
+Enter value for g: 2
+old   1: insert into Employee_Details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into Employee_Details values(4,'a','designer',14,'04-mar-23',50000,2)
+
+1 row created.
+
+SQL> insert into Employee_Details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 5
+Enter value for b: 'b'
+Enter value for c: 'analyst'
+Enter value for d: 15
+Enter value for e: '05-mar-23'
+Enter value for f: 60000
+Enter value for g: 1
+old   1: insert into Employee_Details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into Employee_Details values(5,'b','analyst',15,'05-mar-23',60000,1)
+
+1 row created.
+
+SQL> insert into Employee_Details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 6
+Enter value for b: 'c'
+Enter value for c: 'developer'
+Enter value for d: 16
+Enter value for e: '06-mar-23'
+Enter value for f: 75000
+Enter value for g: 2
+old   1: insert into Employee_Details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into Employee_Details values(6,'c','developer',16,'06-mar-23',75000,2)
+
+1 row created.
+
+SQL> insert into Employee_Details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 10
+Enter value for b: 'Raj'
+Enter value for c: 'developer'
+Enter value for d: 1
+Enter value for e: '20-mar-23'
+Enter value for f: 60000
+Enter value for g: 1
+old   1: insert into Employee_Details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into Employee_Details values(10,'Raj','developer',1,'20-mar-23',60000,1)
+
+1 row created.
+
+SQL> insert into Employee_Details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 8
+Enter value for b: 'e'
+Enter value for c: 'designer'
+Enter value for d: 18
+Enter value for e: '08-mar-23'
+Enter value for f: 60000
+Enter value for g: 2
+old   1: insert into Employee_Details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into Employee_Details values(8,'e','designer',18,'08-mar-23',60000,2)
+
+1 row created.
+
+SQL> insert into Employee_Details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 9
+Enter value for b: 'f'
+Enter value for c: 'developer'
+Enter value for d: 19
+Enter value for e: '09-mar-23'
+Enter value for f: 70000
+Enter value for g: 1
+old   1: insert into Employee_Details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into Employee_Details values(9,'f','developer',19,'09-mar-23',70000,1)
+
+1 row created.
+
+SQL> insert into Employee_Details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 10
+Enter value for b: 'g'
+Enter value for c: 'developer'
+Enter value for d: 20
+Enter value for e: '20-mar-23'
+Enter value for f: 90000
+Enter value for g: 1
+old   1: insert into Employee_Details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into Employee_Details values(10,'g','developer',20,'20-mar-23',90000,1)
+
+1 row created.
+
+SQL> insert into Employee_Details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 21
+Enter value for b: 'g'
+Enter value for c: 'analyst'
+Enter value for d: 3
+Enter value for e: '11-mar-23'
+Enter value for f: 60000
+Enter value for g: 20
+old   1: insert into Employee_Details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into Employee_Details values(21,'g','analyst',3,'11-mar-23',60000,20)
+
+1 row created.
+
+SQL> select salary from Employee_Details;
+
+    SALARY
+----------
+     80000
+     90000
+    100000
+     50000
+     60000
+     75000
+     55000
+     60000
+     70000
+     90000
+
+10 rows selected.
+
+SQL> select distinct Job_name from Employee_Details;
+
+JOB_NAME
+--------------------
+developer
+manager
+analyst
+designer
+
+SQL> update Employee_Details set Salary=70000 where Emp_name='Raj';
+
+1 row updated.
+
+SQL> Select * from Employee_Details;
+
+    EMP_ID EMP_NAME             JOB_NAME             MANAGER_ID HIRE_DATE
+---------- -------------------- -------------------- ---------- ---------
+    SALARY     DEP_ID
+---------- ----------
+         1 x                    manager                      11 01-MAR-23
+     80000          2
+
+         2 y                    analyst                      12 02-MAR-23
+     80000          2
+
+         3 z                    developer                    13 03-MAR-23
+    100000          3
+
+
+    EMP_ID EMP_NAME             JOB_NAME             MANAGER_ID HIRE_DATE
+---------- -------------------- -------------------- ---------- ---------
+    SALARY     DEP_ID
+---------- ----------
+         4 a                    designer                     14 04-MAR-23
+     50000          2
+
+         5 b                    analyst                      15 05-MAR-23
+     60000          1
+
+         6 c                    developer                    16 06-MAR-23
+     75000          2
+
+
+    EMP_ID EMP_NAME             JOB_NAME             MANAGER_ID HIRE_DATE
+---------- -------------------- -------------------- ---------- ---------
+    SALARY     DEP_ID
+---------- ----------
+         7 d                    manager                      17 07-MAR-23
+     55000          3
+
+         8 e                    designer                     18 08-MAR-23
+     60000          2
+
+         9 f                    developer                    19 09-MAR-23
+     70000          1
+
+
+    EMP_ID EMP_NAME             JOB_NAME             MANAGER_ID HIRE_DATE
+---------- -------------------- -------------------- ---------- ---------
+    SALARY     DEP_ID
+---------- ----------
+        10 g                    developer                    20 20-MAR-23
+     90000          1
+
+        21 g                    analyst                       3 11-MAR-23
+     60000         20
+
+        10 Raj                  developer                     1 20-MAR-23
+     70000          1
+
+
+12 rows selected.
