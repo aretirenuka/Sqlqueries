@@ -1,0 +1,161 @@
+SQL> grant create session to system;
+
+Grant succeeded.
+
+SQL> grant create table to system;
+
+Grant succeeded.
+
+SQL> grant unlimited tablespace to system;
+
+Grant succeeded.
+
+SQL> create  user renukaa
+  2  identified by system
+  3  ;
+
+User created.
+
+Enter user-name: system
+Enter password:
+Connected.
+SQL> create table book(
+  2  book_id number(4) primary key
+  3  );
+
+Table created.
+
+SQL> insert into book values(5112);
+
+1 row created.
+
+SQL> insert into book values(5178);
+
+1 row created.
+
+SQL> create table driving
+  2  (
+  3  license_no number(10) not null,
+  4  name varchar2(10),
+  5  dob date not null,
+  6  vehical varchar2(20) not null,
+  7  doi date,
+  8  valid date
+  9  );
+
+Table created.
+
+SQL> desc driving;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ LICENSE_NO                                NOT NULL NUMBER(10)
+ NAME                                               VARCHAR2(10)
+ DOB                                       NOT NULL DATE
+ VEHICAL                                   NOT NULL VARCHAR2(20)
+ DOI                                                DATE
+ VALID                                              DATE
+
+SQL> create table emp1
+  2  (
+  3  emp_id number(2),
+  4  name varchar2(20),
+  5  dob date,
+  6  primary key(name,dob)
+  7  );
+
+Table created.
+SQL> insert into emp1 values(4,'ss','19-feb-23');
+
+1 row created.
+SQL> create table patient
+  2  (
+  3  blood varchar2(20)
+  4  );
+
+Table created.
+
+SQL> insert into patient values('a+');
+
+1 row created.
+SQL> create table patientt
+  2  (
+  3  blood varchar2(20) check(blood in('a+','a-','b+','b-','o+','o-','ab'))
+  4  );
+
+Table created.
+
+SQL> create table bank
+  2  (
+  3  ifsc varchar2(20) default 'cbin02689',
+  4  name varchar2(20)
+  5  );
+
+Table created.
+
+SQL> insert into bank values(default,'sai');
+
+1 row created.
+
+
+SQL> select * from bank;
+
+IFSC                 NAME
+-------------------- --------------------
+cbin02689            sai
+
+SQL> create table teamm
+  2  (
+  3  id number(4) primary key,
+  4  teamname varchar2(10) not null,
+  5  position varchar2(10) unique
+  6  );
+
+Table created.
+
+SQL> create table playerr
+  2  (
+  3  id number(4) references teamm(id),
+  4  playername varchar2(20),
+  5  height number(2)
+  6  );
+
+Table created.
+
+SQL> create table cabb
+  2  (
+  3  id number(4),
+  4  liscence varchar2(20),
+  5  carmodel number(9),
+  6  manufacture number(15),
+  7  primary key(id),
+  8  unique(liscence)
+  9  );
+
+Table created.
+
+SQL> create table driverr
+  2  (
+  3  id number(4),
+  4  name varchar2(20),
+  5  dob date,
+  6  driving_no varchar2(20),
+  7  foreign key (id) references cabb(id)
+  8  );
+
+Table created.
+
+SQL> desc cabb;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                        NOT NULL NUMBER(4)
+ LISCENCE                                           VARCHAR2(20)
+ CARMODEL                                           NUMBER(9)
+ MANUFACTURE                                        NUMBER(15)
+
+SQL> desc driverr;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                                 NUMBER(4)
+ NAME                                               VARCHAR2(20)
+ DOB                                                DATE
+ DRIVING_NO                                         VARCHAR2(20)
